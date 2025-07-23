@@ -1,8 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { Group } from 'three'
-
-
+import { Text } from '@react-three/drei'
 import modelGltf from '../assets/3d/build2.glb'
 import { screens } from '../constants'
 
@@ -44,9 +43,10 @@ const Model2 = ({
 			<group name="Scene" onClick={(ev) => ev.stopPropagation()}>
 				<mesh position={[7, 14.30, -0.55]}>
 					<boxGeometry args={[0.5, 2.5, 12]} />
-					<meshBasicMaterial color={0x354552} />
-					
+					<meshBasicMaterial color={0x354552} />	
 				</mesh>
+
+				
 				<mesh
 					name="arcade_neon"
 					onClick={() => funcs.changeScene(3)}
@@ -59,6 +59,127 @@ const Model2 = ({
 					geometry={nodes.arcade_screen.geometry}
 					// material={ghosted ? materials['screen_gp'] : materials['screenm.005']}
 				/>
+
+				<Text
+					position={[7.7, 14.3, -0.5]}
+					rotation={[0, Math.PI / 2, 0]}
+					fontSize={2.6}
+					color="#000000"
+					fillOpacity={0}
+					font="/fonts/Lobster-Regular.ttf" // Optional: include custom font
+					anchorX="center"
+					anchorY="middle"
+					maxWidth={1000}
+					letterSpacing={-0.05}
+					lineHeight={1}
+					strokeWidth={0.07}           // 🆕 Add stroke
+					strokeColor="White"          // 🆕 Outline color
+				>
+					Alok's Brew
+				</Text>
+
+				<Text
+					position={[16.2, 12.1, -8.7]}
+					rotation={[0, Math.PI / 3.3, 0]}
+					fontSize={0.9}
+					color="#000000"
+					fillOpacity={0}
+					font="/fonts/Lobster-Regular.ttf" // Optional: include custom font
+					anchorX="center"
+					anchorY="middle"
+					maxWidth={1000}
+					letterSpacing={-0.05}
+					lineHeight={1}
+					strokeWidth={0.07}           // 🆕 Add stroke
+					strokeColor="White"          // 🆕 Outline color
+				>
+					Welcome
+				</Text>
+
+
+				<Text
+					position={[16.25, 8.4, -8.85]}
+					rotation={[0, Math.PI / 3.3, 0]}
+					fontSize={0.6}
+					color="#000000"
+					fillOpacity={0}
+					font="/fonts/Lobster-Regular.ttf" // Optional: include custom font
+					anchorX="center"
+					anchorY="middle"
+					maxWidth={1000}
+					letterSpacing={-0.05}
+					lineHeight={1}
+					strokeWidth={0.07}           // 🆕 Add stroke
+					strokeColor="black"          // 🆕 Outline color
+				>
+					Introduction
+				</Text>
+
+
+				<Text
+					position={[16, 7, -8.1]}
+					rotation={[0, Math.PI / 3.3, 0]}
+					fontSize={0.65}
+					color="#000000"
+					fillOpacity={0}
+					font="/fonts/Lobster-Regular.ttf" // Optional: include custom font
+					anchorX="center"
+					anchorY="middle"
+					maxWidth={1000}
+					letterSpacing={-0.05}
+					lineHeight={1}
+					strokeWidth={0.07}           // 🆕 Add stroke
+					strokeColor="black"          // 🆕 Outline color
+				>
+					Projects
+				</Text>
+
+
+				<Text
+					position={[16.1, 5.2, -8.7]}
+					rotation={[0, Math.PI / 3.3, 0]}
+					fontSize={0.6}
+					color="#000000"
+					fillOpacity={0}
+					font="/fonts/Lobster-Regular.ttf" // Optional: include custom font
+					anchorX="center"
+					anchorY="middle"
+					maxWidth={1000}
+					letterSpacing={-0.05}
+					lineHeight={1.7}
+					strokeWidth={0.07}           // 🆕 Add stroke
+					strokeColor="black"          // 🆕 Outline color
+				>
+					Plan
+				</Text>
+
+				<Text
+					position={[16.1, 3.7, -8.7]}
+					rotation={[0, Math.PI / 3.3, 0]}
+					fontSize={0.9}
+					color="#000000"
+					fillOpacity={0}
+					font="/fonts/Lobster-Regular.ttf" // Optional: include custom font
+					anchorX="center"
+					anchorY="middle"
+					maxWidth={1000}
+					letterSpacing={-0.05}
+					lineHeight={1}
+					strokeWidth={0.07}           // 🆕 Add stroke
+					strokeColor="black"          // 🆕 Outline color
+				>
+					Music
+				</Text>
+
+
+
+				<mesh scale={[5.5, 2, 1]} position={[0, 0, -0.1]}>
+					<planeGeometry />
+					<meshBasicMaterial color="#00ffff" transparent opacity={0.3} />
+				</mesh>
+			
+
+
 				<mesh
 					name="bcube"
 					geometry={nodes.bcube.geometry}
@@ -204,11 +325,11 @@ const Model2 = ({
 					geometry={nodes.neon_vending.geometry}
 					material={materials.light_blue}
 				/>
-				<mesh
+				{/* <mesh
 					name="neon_welcome"
 					geometry={nodes.neon_welcome.geometry}
 					material={materials.light_blue}
-				/>
+				/> */}
 				<mesh
 					name="pcube"
 					geometry={nodes.pcube.geometry}
