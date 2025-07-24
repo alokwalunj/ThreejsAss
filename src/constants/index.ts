@@ -42,7 +42,7 @@ export const about = {
     of my works in Projects section.`,
 	github: 'https://github.com/alokwalunj',
 	gmail: 'alokwalunj1717@gmail.com',
-	phone: '+1609218785',
+	phone: '+16097218785',
 	tel: '',
 	wat: 'https://wa.me/+16097218785',
 	exp: [
@@ -73,7 +73,7 @@ export const projects = [
 		techs:
 			'next.js typescript tailwindcss leaflet.js react-query framer-motion',
 		text: 'Advanced weather app with map support to choose location or access current location and get the forecast weather with smooth animations.',
-		github: 'https://github.com/AriyanMLZM/nextjs-Starkregen',
+		github: 'https://github.com/alokwalunj/Social_Media_App',
 		img1: br,
 		img2: proj17,
 	},
