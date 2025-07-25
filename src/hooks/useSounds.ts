@@ -25,7 +25,7 @@ const useSounds = () => {
 
   rainS.current.loop = true
 
-  return { clickS, cameraS, powerS, dogS, dingS, guitarS, rainS, holoS, pbS }
+  return { clickS, cameraS, powerS, dingS, dogS,  guitarS, rainS, holoS, pbS }
 }
 
 export default useSounds

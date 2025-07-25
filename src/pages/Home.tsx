@@ -74,8 +74,8 @@ const Home = () => {
 					controlRef.current!.maxPolarAngle = Math.PI / 1.94
 					controlRef.current!.minPolarAngle = Math.PI / 4
 
-					musics[0].current.play()
-					dingS.current.play()
+					// musics[0].current.play()
+					// dingS.current.play()
 					setStart(true)
 					setIsAnimating(false)
 				},
